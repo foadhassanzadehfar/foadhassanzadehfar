@@ -21,22 +21,29 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      {!showPhoto ? (
-        <div>
-          <button className="btn submit-btn" onClick={handleAccept}>
-            در تئاتر شرکت می کنم
-          </button>
-          <button className="btn cancel-btn" onClick={handleCancel}>
-            {array[index].title}
-          </button>
-        </div>
-      ) : (
-        <div className="photo">
-          <img src={theaterImage} alt="theater" height={564} width={364} />
-        </div>
-      )}
-    </div>
+    <>
+      <div className="address">
+        <h4 className="">
+          آدرس: احمدآباد، پاستور 11 تماشاخانه مایان یا شمایل سابق سالن 1
+        </h4>
+      </div>
+      <div className="container">
+        {!showPhoto ? (
+          <div>
+            <button className="btn submit-btn" onClick={handleAccept}>
+              در تئاتر شرکت می کنم
+            </button>
+            <button className="btn cancel-btn" onClick={handleCancel}>
+              {array[index].title}
+            </button>
+          </div>
+        ) : (
+          <div className="photo">
+            <img src={theaterImage} alt="theater" height={564} width={364} />
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
