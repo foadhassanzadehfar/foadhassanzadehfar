@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import theaterImage from "/public/theater-youtanazi.jpg";
 
 const App = () => {
   const [index, setIndex] = useState(0);
@@ -32,12 +33,7 @@ const App = () => {
         </div>
       ) : (
         <div className="photo">
-          <img
-            src="public/theater-youtanazi.jpg"
-            alt="theater"
-            height={564}
-            width={364}
-          />
+          <img src={theaterImage} alt="theater" height={564} width={364} />
         </div>
       )}
     </div>
