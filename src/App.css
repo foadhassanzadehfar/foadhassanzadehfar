@@ -6,6 +6,9 @@
 } */
 
 body {
+  background-image: url("/public/backgroud.jpg");
+  background-clip: none;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;

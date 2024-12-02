@@ -3,6 +3,7 @@ import "./App.css";
 
 const App = () => {
   const [index, setIndex] = useState(0);
+  const [showPhoto, setShowPhoto] = useState(false);
   const array = [
     { id: 1, title: "در تئاتر شرکت نمی کنم" },
     { id: 2, title: "آیا مطمئنی؟" },
@@ -15,17 +16,30 @@ const App = () => {
   };
 
   const handleAccept = () => {
-    console.log("OKOK");
+    setShowPhoto(true);
   };
 
   return (
     <div className="container">
-      <button className="btn submit-btn" onClick={handleAccept}>
-        در تئاتر شرکت می کنم
-      </button>
-      <button className="btn cancel-btn" onClick={handleCancel}>
-        {array[index].title}
-      </button>
+      {!showPhoto ? (
+        <div>
+          <button className="btn submit-btn" onClick={handleAccept}>
+            در تئاتر شرکت می کنم
+          </button>
+          <button className="btn cancel-btn" onClick={handleCancel}>
+            {array[index].title}
+          </button>
+        </div>
+      ) : (
+        <div className="photo">
+          <img
+            src="public/theater-youtanazi.jpg"
+            alt="theater"
+            height={564}
+            width={364}
+          />
+        </div>
+      )}
     </div>
   );
 };
